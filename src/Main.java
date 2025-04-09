@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -5,11 +6,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Derivadas derivadas = new Derivadas();
         int escolha;
-        char continuar;
+        char continuar = 'S';
         do {
             derivadas.menu();
-            escolha = scanner.nextInt();
-            scanner.nextLine();
+            try {
+                escolha = scanner.nextInt();
+                scanner.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida. Digite um número inteiro!");
+                scanner.nextLine();
+                continue;
+            }
             switch (escolha) {
                 case 0:
                     System.out.println("Fechando programa...");
