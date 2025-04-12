@@ -64,9 +64,7 @@ public class Derivadas implements FuncoesInterface {
             System.out.println("f''(x) = " + aaa);
         } else if (nnn + 2 == 0 || nnn == -1) {
             System.out.println("f''(x) = 0");
-        } /*else if (nnn == -1) {
-            System.out.println("f''(x) = 0");
-        }*/ else {
+        } else {
             System.out.println("f''(x) = " + aaa + "x^" + nnn);
         }
     }
@@ -93,18 +91,9 @@ public class Derivadas implements FuncoesInterface {
 
     @Override
     public void derivada_log(int a, boolean temVariavel) {
-        //int numerador = 1;
         if (temVariavel) {
             System.out.println(comecoDerivada + "log (" + a + "x)");
-            //numerador *= a;
             System.out.println("f'(x) =  1 / x ln(10)");
-            /*boolean ehDivisivel = a % 10 == 0;
-            if (ehDivisivel) {
-                numerador = a / a;
-                System.out.println("f'(x) = " + numerador + " / " + numerador + "x ln 10");
-            } else {
-                System.out.println("f'(x) = " + numerador + " / " + numerador + "x ln 10");
-            }*/
         } else {
             System.out.println(comecoDerivada + "log(" + a + ")");
             System.out.println("f'(x) = 0");
